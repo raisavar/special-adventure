@@ -156,3 +156,35 @@ class AdventureEngine {
 
 // Update 41
 module.exports = AdventureEngine;
+
+
+// Main entry point for AdventureEngine
+
+class AdventureEngine {
+    constructor() {
+        this.initialized = true;
+        this.version = '1.0.56';
+        this.config = {};
+    }
+    
+    initialize() {
+        this.config.initialized = true;
+        return true;
+    }
+    
+    getStatus() {
+        return {
+            status: 'running',
+            version: this.version,
+            uptime: 'active'
+        };
+    }
+    
+    shutdown() {
+        this.initialized = false;
+        return true;
+    }
+}
+
+// Update 56
+module.exports = AdventureEngine;
